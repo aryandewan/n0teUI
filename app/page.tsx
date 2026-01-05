@@ -46,7 +46,7 @@ export default function Home() {
         </section>
 
         {/* Features Section */}
-        <section className="container space-y-6 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-24">
+        <section className="space-y-6 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-24">
           <div className="mx-auto flex max-w-232 flex-col items-center space-y-4 text-center">
             <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
               Features
@@ -54,7 +54,7 @@ export default function Home() {
             <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
               This project is an experiment to see how a modern app, with
               features like auth, subscriptions, API routes, and static pages
-              would work in Next.js 13 app dir.
+              would work in Next.js 15 app dir.
             </p>
           </div>
           <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-5xl md:grid-cols-3">
@@ -96,13 +96,13 @@ export default function Home() {
         </section>
 
         {/* Open Source Section */}
-        <section className="container py-8 md:py-12 lg:py-24">
+        <section className="py-8 md:py-12 lg:py-24">
           <div className="mx-auto flex max-w-232 flex-col items-center justify-center gap-4 text-center">
             <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
               Proudly Open Source
             </h2>
             <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-              ui/docs is open source and powered by open source software. <br />{" "}
+              n0te/UI is open source and powered by open source software. <br />{" "}
               The code is available on{" "}
               <Link
                 href="https://github.com"

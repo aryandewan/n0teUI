@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "ui/docs - Beautiful UI components",
+  title: "n0te/UI - Beautiful UI components",
   description: "Beautifully designed components built with Radix UI and Tailwind CSS.",
 };
 
