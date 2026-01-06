@@ -21,7 +21,7 @@ export function SidebarNav({ items }: SidebarNavProps) {
     <div className="w-full">
       {items.map((item, index) => (
         <div key={index} className={cn("pb-4")}>
-          <h4 className="mb-1 rounded-md px-2 py-1 text-sm font-semibold">
+          <h4 className="rounded-md px-2 py-1 text-lg font-semibold">
             {item.title}
           </h4>
           {item?.items?.length && (
