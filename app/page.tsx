@@ -30,13 +30,21 @@ export default function Home() {
             </p>
             <div className="space-x-4">
               <Link href="/docs">
-                <Button size="lg" className="h-11">
+                <Button size="lg" className="h-11 cursor-pointer">
                   Get Started
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-              <Link href="https://github.com" target="_blank" rel="noreferrer">
-                <Button variant="outline" size="lg" className="h-11">
+              <Link
+                href="https://github.com/aryandewan/n0teUI"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="h-11 cursor-pointer hover:bg-black hover:text-white"
+                >
                   <Github className="mr-2 h-4 w-4" />
                   GitHub
                 </Button>
@@ -105,7 +113,7 @@ export default function Home() {
               n0te/UI is open source and powered by open source software. <br />{" "}
               The code is available on{" "}
               <Link
-                href="https://github.com"
+                href="https://github.com/aryandewan/n0teUI"
                 target="_blank"
                 rel="noreferrer"
                 className="underline underline-offset-4"

@@ -168,8 +168,11 @@ export function SearchDialog({ open, onOpenChange }: SearchDialogProps) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-2xl p-0 bg-white">
+        <DialogHeader className="px-4 pt-4 pb-0">
+          <DialogTitle>Search Documentation</DialogTitle>
+        </DialogHeader>
         <div className="flex items-center border-b px-3">
-          <Search className="mr-2 h-4 w-4 shrink-0" />
+          <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
           <Input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
