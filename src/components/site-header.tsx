@@ -31,7 +31,7 @@ export function SiteHeader() {
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, []);
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur">
+    <header className="sticky top-0 z-50 w-full backdrop-blur text-white">
       <div className="flex h-14 w-full items-center">
         <div className="mr-4 hidden md:flex">
           <Link className="mr-6 flex items-center space-x-2" href="/">

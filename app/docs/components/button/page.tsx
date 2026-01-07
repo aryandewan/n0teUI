@@ -3,23 +3,12 @@ import { Separator } from "@/components/ui/separator"
 
 export default function ButtonPage() {
   return (
-    <div className="space-y-2">
-      <div className="flex items-center space-x-1 text-sm text-muted-foreground">
-        <div className="overflow-hidden text-ellipsis whitespace-nowrap">
-          Docs
-        </div>
-        <div className="text-muted-foreground">/</div>
-        <div className="overflow-hidden text-ellipsis whitespace-nowrap">
-          Components
-        </div>
-        <div className="text-muted-foreground">/</div>
-        <div className="font-medium text-foreground">Button</div>
-      </div>
+    <div className="space-y-2 text-white">
       <div className="space-y-2">
         <h1 className="scroll-m-20 text-4xl font-bold tracking-tight">
           Button
         </h1>
-        <p className="text-lg text-muted-foreground">
+        <p className="text-md text-white/50">
           Displays a button or a component that looks like a button.
         </p>
       </div>
@@ -53,7 +42,7 @@ export default function ButtonPage() {
             Usage
           </h2>
           <div className="overflow-x-auto">
-            <pre className="mb-4 mt-6 overflow-x-auto rounded-lg border bg-zinc-950 py-4 dark:bg-zinc-900">
+            <pre className="mb-4 mt-6 overflow-x-auto rounded-lg bg-zinc-950 py-4 dark:bg-zinc-900">
               <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm text-white">
 {`import { Button } from "@/components/ui/button"
 
@@ -94,7 +83,7 @@ export function ButtonDemo() {
                 Destructive
               </h3>
               <div className="flex items-center justify-center rounded-md border border-dashed p-8">
-                <Button variant="destructive">Destructive</Button>
+                <Button>Destructive</Button>
               </div>
             </div>
 

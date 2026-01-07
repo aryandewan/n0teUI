@@ -18,10 +18,10 @@ export function SidebarNav({ items }: SidebarNavProps) {
   const pathname = usePathname()
 
   return items.length ? (
-    <div className="w-full">
+    <div className="w-full text-white">
       {items.map((item, index) => (
-        <div key={index} className={cn("pb-4")}>
-          <h4 className="rounded-md px-2 py-1 text-lg font-semibold">
+        <div key={index} className={cn("pb-4 pl-5")}>
+          <h4 className="p-2 text-sm font-semibold text-white/50">
             {item.title}
           </h4>
           {item?.items?.length && (
@@ -50,7 +50,7 @@ export function DocsSidebarNavItems({
             key={index}
             href={item.href}
             className={cn(
-              "group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline",
+              "group flex w-full items-center p-2 font-semibold",
               item.disabled && "cursor-not-allowed opacity-60",
               pathname === item.href
                 ? "font-medium text-foreground"

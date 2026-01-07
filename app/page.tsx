@@ -11,23 +11,9 @@ export default function Home() {
         {/* Hero Section */}
         <section className="min-h-dvh flex items-center justify-center">
           <div className="container flex max-w-5xl flex-col items-center gap-4 text-center">
-            <Link
-              href="/docs"
-              className="rounded-2xl bg-muted px-4 py-1.5 text-sm font-medium"
-              target="_blank"
-            >
-              Follow along on Twitter
-            </Link>
-            <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
-              Build your WEBSITE with{" "}
-              <span className="text-gradient bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                n0te/UI
-              </span>
+            <h1 className="cursor-default font-heading text-3xl sm:text-5xl md:text-6xl lg:text-9xl text-gradient bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              n0te/UI
             </h1>
-            <p className="max-w-2xl leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-              Beautifully designed components built with Radix UI and Tailwind
-              CSS. Accessible. Customizable. Open Source.
-            </p>
             <div className="space-x-4">
               <Link href="/docs">
                 <Button size="lg" className="h-11 cursor-pointer">
@@ -43,7 +29,7 @@ export default function Home() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="h-11 cursor-pointer hover:bg-black hover:text-white"
+                  className="h-11 cursor-pointer hover:bg-white hover:text-black"
                 >
                   <Github className="mr-2 h-4 w-4" />
                   GitHub
