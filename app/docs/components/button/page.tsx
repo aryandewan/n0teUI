@@ -3,7 +3,7 @@ import { Separator } from "@/components/ui/separator"
 
 export default function ButtonPage() {
   return (
-    <div className="space-y-2 text-white">
+    <div className="min-h-dvh w-3xl text-white">
       <div className="space-y-2">
         <h1 className="scroll-m-20 text-4xl font-bold tracking-tight">
           Button
