@@ -2,19 +2,20 @@ import Link from "next/link";
 import { ArrowRight, Github, Zap, Palette, Code2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SiteHeader } from "@/components/site-header";
+import { audio, mono, outfit } from "@/config/fonts";
 
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
-      <main className="flex-1">
+      <main className="flex-1 text-white">
         {/* Hero Section */}
-        <section className="min-h-dvh flex items-center justify-center">
+        <section className={`min-h-dvh flex items-center justify-center ${mono.className}`}>
           <div className="container flex max-w-5xl flex-col items-center gap-4 text-center">
-            <h1 className="cursor-default font-heading text-3xl sm:text-5xl md:text-6xl lg:text-9xl text-gradient bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <h1 className="cursor-default font-bold text-3xl sm:text-5xl md:text-6xl lg:text-9xl text-white">
               n0te/UI
             </h1>
-            <div className="space-x-4">
+            <div className={`space-x-4 ${mono.className}`}>
               <Link href="/docs">
                 <Button size="lg" className="h-11 cursor-pointer">
                   Get Started

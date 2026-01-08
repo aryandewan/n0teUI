@@ -14,11 +14,11 @@ import {
 } from "@/components/ui/navigation-menu";
 import { SearchDialog } from "@/components/search-dialog";
 import { cn } from "@/lib/utils";
+import { outfit } from "@/config/fonts";
 
 export function SiteHeader() {
   const [searchOpen, setSearchOpen] = React.useState(false);
 
-  // Handle Cmd+K / Ctrl+K keyboard shortcut
   React.useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key === "k") {
@@ -31,42 +31,44 @@ export function SiteHeader() {
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, []);
   return (
-    <header className="sticky top-0 z-50 w-full backdrop-blur text-white bg-[#0A0A0A]">
+    <header
+      className={`sticky top-0 z-50 w-full backdrop-blur text-white bg-[#0A0A0A] ${outfit.className}`}
+    >
       <div className="flex h-14 w-full items-center">
         <div className="mr-4 hidden md:flex">
           <Link className="mr-6 flex items-center space-x-2" href="/">
             <div className="h-6 w-6 rounded-md bg-primary" />
-            <span className="hidden font-bold sm:inline-block">n0te/UI</span>
+            <span className="hidden font-bold sm:inline-block">n/UI</span>
           </Link>
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
                   <Link
-                    href="/components"
-                    className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-active:bg-accent/50 data-[state=open]:bg-accent/50"
+                    href="/docs"
+                    className="group inline-flex h-9 w-max items-center justify-center rounded-lg py-2 px-3 text-sm transition-colors focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-active:bg-accent/50 data-[state=open]:bg-accent/50 hover:bg-[#1c1c1c] font-semibold"
                   >
-                    Components
+                    Docs
                   </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
                   <Link
-                    href="/docs"
-                    className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-active:bg-accent/50 data-[state=open]:bg-accent/50"
+                    href="/components"
+                    className="group inline-flex h-9 w-max items-center justify-center rounded-lg py-2 px-3 text-sm transition-colors focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-active:bg-accent/50 data-[state=open]:bg-accent/50 hover:bg-[#1c1c1c] font-semibold"
                   >
-                    Documentation
+                    Components
                   </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
         </div>
-        <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
+        <div className="flex flex-1 items-center justify-between space-x-5 md:justify-end px-5">
           <div className="w-full flex-1 md:w-auto md:flex-none">
             <Button
-              className="inline-flex items-center whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground px-4 py-2 relative h-8 w-full justify-start rounded-lg bg-[#1c1c1c] border border-white/20 text-sm font-normal text-muted-foreground shadow-none sm:pr-12 md:w-40 lg:w-64"
+              className="inline-flex items-center whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 px-4 py-2 relative h-8 w-full justify-start rounded-lg bg-[#1c1c1c] border border-white/20 text-sm shadow-none sm:pr-12 md:w-40 lg:w-64 cursor-pointer"
               onClick={() => setSearchOpen(true)}
             >
               <span className="hidden lg:inline-flex">
@@ -74,20 +76,24 @@ export function SiteHeader() {
               </span>
               <span className="inline-flex lg:hidden">Search...</span>
               <kbd className="pointer-events-none absolute right-[0.3rem] top-[0.3rem] hidden h-5 select-none items-center gap-1 rounded bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
-                <span className="text-xs">⌘</span>K
+                <span className="text-sm">⌘</span>K
               </kbd>
             </Button>
           </div>
-          <nav className="flex items-center">
-            <Link href="https://github.com" target="_blank" rel="noreferrer">
-              <div className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-8 w-8">
-                <Github className="h-4 w-4" />
+          <nav className="flex items-center space-x-5">
+            <Link
+              href="https://github.com/aryandewan"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div className="inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 h-8 w-8 hover:bg-[#1c1c1c]">
+                <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </div>
             </Link>
-            <Link href="https://twitter.com" target="_blank" rel="noreferrer">
-              <div className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-8 w-8">
-                <Twitter className="h-4 w-4 fill-current" />
+            <Link href="https://x.com/n0tee_" target="_blank" rel="noreferrer">
+              <div className="inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 h-8 w-8 hover:bg-[#1c1c1c]">
+                <Twitter className="h-5 w-5 fill-current" />
                 <span className="sr-only">Twitter</span>
               </div>
             </Link>
